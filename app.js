@@ -1,13 +1,20 @@
 const input = document.getElementById("form");
-const task = document.getElementById("text");
+//const task = document.getElementById("text");
+const taskElement = document.getElementsByClassName("element");
+const taskContainer = document.getElementsByClassName("task-container");
 //
 
-let tasks = [];
+const tasks = [];
 
 function addTask() {
-  let newTask = input.value;
+  let newTask = { title: input.value, finished: false };
   tasks.push(newTask);
 
-  console.log(tasks);
+  const taskText = input.value;
+  const newDiv = document.createElement("div");
+  newDiv.innerHTML = taskText;
+  newDiv.appendChild(taskContainer);
+
+  //console.log(tasks);
   input.value = "";
 }
