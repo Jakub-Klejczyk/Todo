@@ -5,16 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <title>ToDo List</title>
   </head>
   <body>
     <div class="container">
       <div class="header">
         <h2 class="title">To-Do List</h2>
-        <div>
-          <input id="form" type="text" placeholder="Task" />
-          <button id="add-button" onclick="addTask()">Add task</button>
-        </div>
+      </div>
+      <div class="input">
+        <input id="form" type="text" placeholder="Task" />
+        <button id="add-button" onclick="addTask()">Add task</button>
       </div>
       <div class="task-container"></div>
       <div class="done-container"></div>

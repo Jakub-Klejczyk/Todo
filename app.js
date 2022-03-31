@@ -16,16 +16,22 @@ const doneTasks = [];
 function addTask() {
   let newTask = { title: input.value, finished: false };
   tasks.push(newTask);
+  if (tasks.length >= 7) {
+    alert("Do what you've already planned!");
+    return;
+  }
   const divElement = document.createElement("div");
   const divButtonDel = document.createElement("button");
   const divButtonDone = document.createElement("button");
   divElement.innerText = newTask.title;
-  divButtonDel.innerHTML = "<button class='delete-button'>Delete</button>";
-  divButtonDone.innerHTML = "<button class='done-button'>Done</button>";
+  divButtonDel.innerText = "Delete";
+  divButtonDone.innerHTML = "Done";
   divElement.append(divButtonDel, divButtonDone);
   taskContainer.append(divElement);
+  divElement.classList.add("div-element");
+  divButtonDel.classList.add("delete-button");
+  divButtonDone.classList.add("done-button");
   input.value = "";
-  console.log(tasks);
 }
 
 function deleteTask(e) {
@@ -68,6 +74,7 @@ function restoreTask(i) {
     divElement.innerText = todoText;
     divButtonDel.innerHTML = "<button class='delete-button'>Delete</button>";
     divButtonDone.innerHTML = "<button class='done-button'>Done</button>";
+    divElement.classList.add("div-element");
     divElement.append(divButtonDel, divButtonDone);
     taskContainer.append(divElement);
   }

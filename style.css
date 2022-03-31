@@ -3,14 +3,77 @@
   padding: 0px;
   box-sizing: border-box;
 }
+
+body {
+  background: linear-gradient(45deg, rgb(207, 205, 250), rgb(102, 106, 217));
+  height: 100vh;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 3px solid black;
+  border-radius: 5px;
+  box-shadow: 5px 5px #35353593;
+  width: 25%;
+  height: 80%;
+}
+
 .header {
-  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 25px 0px;
+}
+
+.title {
+  font-family: "Public Sans", sans-serif;
+  font-size: 32px;
+}
+
+.input {
+  display: flex;
+  margin: 10px;
+  padding: 10px 10px;
+  justify-content: center;
+}
+
+#add-button {
+  margin-left: 10px;
+  font-family: "Public Sans", sans-serif;
+}
+
+#form {
+  font-family: "Public Sans", sans-serif;
+  height: 30px;
 }
 
 .task-container {
-  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  height: 50%;
 }
 
 .done-container {
-  background-color: red;
+  display: flex;
+  flex-direction: column;
+}
+
+.div-element {
+  display: flex;
+  width: auto;
+  height: 15%;
+  margin: 5px 10px;
+  border: 3px solid black;
+  border-radius: 5px;
+  background-color: white;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 5px;
+}
+
+.div-element #text {
+  font-family: "Public Sans", sans-serif;
 }
