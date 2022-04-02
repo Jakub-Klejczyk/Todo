@@ -11,14 +11,10 @@ body {
 
 .container {
   position: absolute;
-  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  border: 3px solid black;
-  border-radius: 5px;
-  box-shadow: 5px 5px #35353593;
+  top: 5%;
+  transform: translate(-50%, 0);
   width: 25%;
-  height: 80%;
 }
 
 .header {
@@ -30,7 +26,8 @@ body {
 
 .title {
   font-family: "Public Sans", sans-serif;
-  font-size: 32px;
+  font-size: 38px;
+  font-weight: bolder;
 }
 
 .input {
@@ -43,11 +40,18 @@ body {
 #add-button {
   margin-left: 10px;
   font-family: "Public Sans", sans-serif;
+  background-color: rgb(115, 56, 255);
+  color: white;
+  border: 3px solid rgb(115, 56, 255);
+  border-radius: 5px;
 }
 
 #form {
   font-family: "Public Sans", sans-serif;
   height: 30px;
+  border: 3px solid rgb(102, 106, 217);
+  padding-left: 5px;
+  border-radius: 5px;
 }
 
 .task-container {
@@ -64,16 +68,63 @@ body {
 .div-element {
   display: flex;
   width: auto;
-  height: 15%;
+  height: 5vh;
   margin: 5px 10px;
-  border: 3px solid black;
+  border: 3px solid rgb(102, 106, 217);
   border-radius: 5px;
   background-color: white;
   align-items: center;
   justify-content: space-between;
   padding: 0px 5px;
+  font-family: "Public Sans", sans-serif;
 }
 
-.div-element #text {
+.restore-button {
   font-family: "Public Sans", sans-serif;
+  background-color: rgb(115, 56, 255);
+  color: white;
+  border: 3px solid rgb(115, 56, 255);
+  border-radius: 5px;
+}
+
+.done-element {
+  display: flex;
+  width: auto;
+  margin: 5px 10px;
+  border: 3px solid black;
+  border-radius: 5px;
+  background-color: rgb(150, 150, 150);
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 5px;
+  height: 5vh;
+  font-family: "Public Sans", sans-serif;
+}
+
+.div-inside {
+  display: flex;
+  width: 80%;
+  text-decoration: line-through;
+}
+
+.div-p {
+  display: flex;
+  width: 80%;
+}
+
+.delete-button {
+  font-family: "Public Sans", sans-serif;
+  background-color: rgb(115, 56, 255);
+  color: white;
+  border: 3px solid rgb(115, 56, 255);
+  border-radius: 5px;
+}
+
+.done-button {
+  font-family: "Public Sans", sans-serif;
+  margin-left: 5px;
+  background-color: rgb(115, 56, 255);
+  color: white;
+  border: 3px solid rgb(115, 56, 255);
+  border-radius: 5px;
 }
