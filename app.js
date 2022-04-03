@@ -15,6 +15,10 @@ const doneTasks = [];
 
 function addTask() {
   let newTask = { title: input.value, finished: false };
+  if (input !== null && input.value === "") {
+    alert("You forgot to write your task.");
+    return;
+  }
   tasks.push(newTask);
   const divElement = document.createElement("div");
   const divButtonDel = document.createElement("button");
