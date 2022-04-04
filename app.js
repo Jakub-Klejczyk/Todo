@@ -86,3 +86,4 @@ function restoreTask(i) {
     taskContainer.append(divElement);
   }
 }
+gsap.from(".div-element", { duration: 1, ease: "bounce.out", x: "400%" });
