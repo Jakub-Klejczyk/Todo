@@ -1,16 +1,8 @@
-const addButton = document.getElementById("add-button");
-gsap.from(".title", {
-  duration: 1,
+const tl = gsap.timeline({ defaults: { duration: 1 } });
+
+tl.from(".title", {
   ease: "back",
   y: "100%",
 });
-
-const anim = gsap.from(".div-element", {
-  duration: 1,
-  ease: "bounce.out",
-  x: "-100%",
-});
-
-addButton.addEventListener("click", () => {
-  anim.play();
-});
+tl.from("#form", { ease: "power2", opacity: 0, x: "-400%" });
+tl.from("#add-button", { ease: "power2", opacity: 0, x: "400%" }, "<");
