@@ -5,7 +5,6 @@ const taskContainer = document.getElementsByClassName("task-container")[0];
 const doneContainer = document.getElementsByClassName("done-container")[0];
 
 //
-
 taskContainer.addEventListener("click", deleteTask);
 taskContainer.addEventListener("click", doneTask);
 doneContainer.addEventListener("click", restoreTask);
@@ -24,7 +23,7 @@ function addTask() {
   const divButtonDel = document.createElement("button");
   const divButtonDone = document.createElement("button");
   const divP = document.createElement("div");
-  divElement.innerText = newTask.title;
+  divP.innerText = newTask.title;
   divButtonDel.innerText = "Delete";
   divButtonDone.innerText = "Done";
   divElement.append(divP, divButtonDel, divButtonDone);
@@ -86,4 +85,3 @@ function restoreTask(i) {
     taskContainer.append(divElement);
   }
 }
-gsap.from(".div-element", { duration: 1, ease: "bounce.out", x: "400%" });
